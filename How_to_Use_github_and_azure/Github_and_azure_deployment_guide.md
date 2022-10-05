@@ -24,11 +24,9 @@ The standing up of the original Azure SQL DB Instance can be done in a variety o
 * Azure CLI (Sql Up) or
 * Powershell
 
-To keep it simple, I will opt to do it all in **powershell**
+They have pre-defined templates and steps we can use, which save a **lot** of time! 🚀
 
-They have pre-defined templates we can use, which save a **lot** of time! 🚀
-
-![](2022-09-23-09-00-59.png)
+![](2022-10-05-11-06-56.png)
 
 ### Linking the Azure SQL DB to GitHub Repo
 
