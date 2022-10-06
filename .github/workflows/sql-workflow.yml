@@ -6,11 +6,15 @@ name: sql-workflow
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push or pull request events but only for the "main" branch and .sql files in "database_ddl" folder
   push:
     branches: [ "main" ]
+    paths:
+      - 'database_ddls/**.sql'
   pull_request:
     branches: [ "main" ]
+    paths:
+      - 'database_ddls/**.sql'    
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
