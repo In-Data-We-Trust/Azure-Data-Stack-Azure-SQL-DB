@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: azure/sql-action@v2
         with:        
-          connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING_idwt_production }}
+          connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING_IDWT_PRODUCTION }}
           path: './Database.sqlproj'
           action: 'publish'   
 
