@@ -14,3 +14,10 @@ Contains all the information required to build and deploy an Azure SQL DB as par
 
 * Azure SQL Database
 
+## Key information to know
+
+When merging to main, all SQL scripts will be taken from [here](https://github.com/In-Data-We-Trust/Azure-Data-Stack-Azure-SQL-DB/tree/main/database_ddls) and a SQL Project will be generated, then published.
+
+The process needs only one ***create table*** for each table, even when adding columns. The pipeline's will review the changes and alter the target schema as needed. 
+
+The only item it will not carry out will 

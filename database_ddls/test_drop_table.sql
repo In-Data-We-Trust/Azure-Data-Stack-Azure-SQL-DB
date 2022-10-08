@@ -1,0 +1,1 @@
+DROP TABLE [dbo].[test_four_table]
