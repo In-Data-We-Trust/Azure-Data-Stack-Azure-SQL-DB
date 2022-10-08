@@ -35,5 +35,7 @@ jobs:
           connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING_IDWT_PRODUCTION }}
           path: './Database.sqlproj'
           action: 'publish'
+          arguments: '/p:DropObjectsNotInSource=true'   # Optional properties and parameters for SqlPackage Publish
+
           # path: 'database_ddls/**.sql' - This has been commented out. This path can be used to pick up specific sql queries for use in the github action
 
