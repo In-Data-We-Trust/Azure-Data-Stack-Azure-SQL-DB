@@ -20,4 +20,4 @@ When merging to main, all SQL scripts will be taken from [here](https://github.c
 
 The process needs only one ***create table*** for each table, even when adding columns. The pipeline's will review the changes and alter the target schema as needed. 
 
-The only item it will not carry out will 
+It use's DDL language and is not intended to insert data. The aspect of inserting data will be handled elsewhere by another pipeline tool.
