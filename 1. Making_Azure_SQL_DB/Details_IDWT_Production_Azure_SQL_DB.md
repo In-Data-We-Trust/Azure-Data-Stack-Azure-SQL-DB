@@ -17,7 +17,8 @@ Below is a list of key information that may be needed for future reference
 - Compute and Storage - Basic, 5 DTU's at $6.11 per month
 - Connectivity Method: Leaving as Public Endpoint for now so that it can work across other Azure services. - https://learn.microsoft.com/en-gb/azure/azure-sql/database/network-access-controls-overview?view=azuresql
 - Firewall Rules: Set to No for both Azure Services and Adding client IP address. This can be changed on a per cloud feature basis
-- Ledger: enabled ledger for auditing purposes
+- Ledger: disabled ledger for auditing purposes
+  - The initial deployment with enabled ledger functionality wasn't compatible with github pipelines. This isn't required and is more suitable to use-cases where a blockchain ledger is required. One to explore later
   
 ## Overview of Details Entered
 
