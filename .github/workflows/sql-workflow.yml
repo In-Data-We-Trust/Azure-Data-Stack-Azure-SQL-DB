@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+# This is a workflow template to help you get started with Actions which has been updated with the sql-workflow (https://github.com/marketplace/actions/azure-sql-deploy)
 # .github/workflows/sql-workflow.yml
 
 
@@ -6,7 +6,7 @@ name: sql-workflow
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch and .sql files in "database_ddl" folder
+  # Triggers the workflow on push or pull request events but only for the "main" branch and when .sql files in "database_ddl" folder have been changed
   push:
     branches: [ "main" ]
     paths:
@@ -33,4 +33,7 @@ jobs:
       - uses: azure/sql-action@v2
         with:        
           connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING_IDWT_PRODUCTION }}
-          path: 'database_ddls/**.sql'
+          path: './Database.sqlproj'
+          action: 'publish'
+          # path: 'database_ddls/**.sql' - This has been commented out. This path can be used to pick up specific sql queries for use in the github action
+
